@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      
+
+
+    <h:head>
+        <meta name="viewport" content="width=device-width,user-scalable=si,initial-scale=1.0"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+        <link rel="stylesheet" type="text/css"  media ="all" href="resources/css/wartokg.css"/>
+        <link rel="shortcut icon"  href="resources/images/wartokg.ico"/>
+        <title>WARTOKG</title>
+    </h:head>
+    <h:body>
+        <p:layout id="container" >
+
+            <p:layoutUnit id="header" position="north" size="135" >
+                <h:graphicImage library="images" id="logowtk" name="wartokglogo2.png" />   
+                <h1> <h:outputText id="tit1" value="#{bundle.Emblema} "/></h1>
+                <h2> <h:outputText id="tit2" value="#{bundle.Welcome} "/></h2>   
+
+            </p:layoutUnit>
+            <p:layoutUnit  id="grecent" position="center" size="648"> 
+
+                <h:form>
+                    <p:growl id="growl" autoUpdate="true"     showDetail="true" life="3000" />
+
+                    <p:panel  id="panel"   widgetVar="paneldu"  style="display: flex" visible="true" >
+                        <p:fieldset  id="dp"  legend="Brindanos Tus Datos "  > 
+
+                            <h:panelGrid    columns="2"  style="margin-bottom: 10px" cellpadding="2" > 
+                                <h:panelGrid columns="2" id="tedad" style="margin-bottom:10px" >
+                                    <p:fieldset id="edad">
+                                        <h:outputLabel for="txtedad" value="#{bundle.Edad} "/>
+                                        <p:inputText   id="txtedad"   value="#{WARTKG.edad}" style="margin-bottom:10px" required="true" requiredMessage="Tú Edad Campo Requerido"/>
+                                        <p:column/>
+                                        <p:slider for="txtedad"/>
+                                        
+                                        <p:message for="txtedad"/>
+                                    </p:fieldset>
+                                </h:panelGrid>
+
+                                <p:fieldset id="altura">
+                                    <p:outputLabel for="txtaltura" value="#{bundle.Altura} " /> 
+                                    <p:selectOneMenu id="txtaltura" value="#{WARTKG.altura}"  style="width:240px" required="true" requiredMessage="Tú Altura Campo Requerido">
+                                        <f:selectItem itemLabel="Select One" itemValue="" />
+                                        <f:selectItem itemLabel="150" itemValue="150" />
+                                        <f:selectItem itemLabel="152" itemValue="152" />
+                                        <f:selectItem itemLabel="154" itemValue="154" />
+                                        <f:selectItem itemLabel="156" itemValue="156" />
+                                        <f:selectItem itemLabel="158" itemValue="158" />
+                                        <f:selectItem itemLabel="160" itemValue="160" />
+                                        <f:selectItem itemLabel="162" itemValue="162" />
+                                        <f:selectItem itemLabel="164" itemValue="164" />
+                                        <f:selectItem itemLabel="166" itemValue="166" />
+                                        <f:selectItem itemLabel="168" itemValue="168" />
+                                        <f:selectItem itemLabel="170" itemValue="170" />
+                                        <f:selectItem itemLabel="172" itemValue="172" />
+                                        <f:selectItem itemLabel="174" itemValue="174" />
+                                        <f:selectItem itemLabel="176" itemValue="176" />
+                                        <f:selectItem itemLabel="178" itemValue="178" />
+                                        <f:selectItem itemLabel="180" itemValue="180" />
+                                        <f:selectItem itemLabel="182" itemValue="182" />
+                                        <f:selectItem itemLabel="184" itemValue="184" />
+                                        <f:selectItem itemLabel="186" itemValue="186" />
+                                        <f:selectItem itemLabel="188" itemValue="188" />
+                                        <f:selectItem itemLabel="190" itemValue="190" />
+                                    </p:selectOneMenu>
+                                    <h:outputText value=" #{bundle.cm}"/>
+                                    <p:message for="txtaltura"/>
+                                </p:fieldset>
+
+                                <p:fieldset id="Sexo">
+                                    <p:outputLabel  for="rdbSexo" value="#{bundle.Sexo}"/>
+                                    <p:selectOneRadio  id="rdbSexo" value="#{WARTKG.sexo}"   required="true" requiredMessage="Tú Sexo Campo Requerido">
+                                        <f:selectItem itemValue="M" itemLabel="MASCULINO"/>
+                                        <f:selectItem itemValue="F" itemLabel="FEMENINO"/>  
+                                    </p:selectOneRadio>
+                                    <p:message for="rdbSexo"/>
+                                </p:fieldset>
+                                <p:fieldset id="Peso">
+                                    <h:outputLabel for="txtpesoa" value="#{bundle.Peso}"/>
+                                    <p:inputText id="txtpesoa"  value="#{WARTKG.pesoAc}"  required="true" requiredMessage="Tú Peso Actual Campo Requerido">  
+                                    </p:inputText>
+                                    
+                                        <h:outputText value=" #{bundle.Kg}"/>
+                                    <p:message for="txtpesoa"/>
+                                </p:fieldset>
+                            </h:panelGrid>
+                            <h:panelGrid columns="10" style="margin-bottom:10px" cellpadding="10">
+                                <p:fieldset id="AF">
+                                    <p:outputLabel for="Af" value="#{bundle.Af}" />
+                                    <p:selectOneMenu id="Af" value="#{WARTKG.af}" required="true" style="width:565px" requiredMessage="Tú Nivel de Actividad Fisica Campo Requerido">
+                                        <f:selectItem itemLabel="Select One" itemValue="" />
+                                        <f:selectItem itemLabel="Personas Sedentarias(Poca Actividad Fisica)" itemValue="1.2" />
+                                        <f:selectItem itemLabel="Actividad Ligera(Actividad Fisica de  1 a 3 veces X Semana)" itemValue="1.375" />
+                                        <f:selectItem itemLabel="Actividad Moderada(Actividad Fisica de  3 a 5 veces X Semana)" itemValue="1.55" />
+                                        <f:selectItem itemLabel="Actividad Intensa(Actividad Fisica de  6 a 7 veces X Semana)" itemValue="1.725" />
+                                        <f:selectItem itemLabel="Actividad Extremadamente Alta(Atletas Profesionales )" itemValue="1.90" />
+                                    </p:selectOneMenu>
+                                    <p:message for="Af"/>
+                                </p:fieldset>
+                            </h:panelGrid>
+                              </p:fieldset>
+                        
+                    <p:commandButton id="withIcon" value="#{bundle.Submit}"  action="#{WARTKG.processYourWar}"  icon="ui-icon-script" />
+                        
+               </p:panel>
+                </h:form>
+            </p:layoutUnit>
+            <p:layoutUnit position="south" size="auto">
+                <div id="pcolumn">
+                    <h3> <h:outputText id="tit3" value="La Solución más rapida para lograrlo.¡Consume MENOS!"/> </h3>
+                    <h2>Contacto:</h2>
+                    <h2><h:outputText value="email: wartokgwebcub@gmail.com"/></h2>
+                </div>
+                <div id="logom">
+                    <h:graphicImage library="images" name="LogoMumtm.png"/>
+                </div>  
+
+            </p:layoutUnit>
+        </p:layout>
+    </h:body>
+</html>
+
