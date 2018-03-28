@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta name="viewport" content="width=device-width,user-scalable=si,initial-scale=1.0"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+        <link rel="stylesheet" type="text/css"  media ="all" href="resources/css/wartokg.css"/>
+        <link rel="shortcut icon"  href="resources/images/wartokg.ico"/>
+        <title>WARTOKG YOUR DATA</title>
+
+    </h:head>
+    <h:body>
+        <p:layout id="container" >
+
+            <p:layoutUnit  id="header" position="north" size="133" >
+                <h:graphicImage library="images" id="logowtk" name="wartokglogo2.png" />   
+                <h1> <h:outputText id="tit1" value="#{bundle.Emblema} "/></h1>
+                <h2> <h:outputText id="tit2" value="#{bundle.Welcome} "/> </h2>   
+
+            </p:layoutUnit>
+            <p:layoutUnit  id="resp" position="center" size="712"> 
+                <h:form id="f2">
+                    <p:growl id="growl" autoUpdate="true"     showDetail="true" life="3000" />
+
+                    <p:panel  id="panel2"   widgetVar="paneldu"  style="display: flex" visible="true" >
+                        <p:fieldset  id="dv"  legend="Tus Valores "> 
+                            <h:outputText value="#{bundle.CPeso}"/>
+                            <h:outputText  style="color:#66ff33;font-size:20px" value="#{WARTKG.pesoAc}"/>
+                            <h:outputText value=" #{bundle.Kg}"/>
+                            <p>
+                                <h:outputText value="#{bundle.Edad}"/>
+                                <h:outputText style="color:#66ff33;font-size:20px" value=" #{WARTKG.edad}" />
+
+                            </p>
+                            <h:outputText value="#{bundle.Altura}"/>
+                            <h:outputText style="color:#66ff33;font-size:20px" value=" #{WARTKG.altura}"/>
+                            <h:outputText value=" #{bundle.cm}"/>
+                            <p>
+                                <h:outputText value="#{bundle.Sexo}"/>
+                                <h:outputText style="color:#66ff33;font-size:20px" value=" #{WARTKG.sexo}"/>
+                            </p>
+                            <h:outputText value="#{bundle.Af}"/>
+                            <h:outputText  style="color:#66ff33;font-size:20px" value=" #{WARTKG.af}" />
+                            <p>
+                                <h:outputText value="#{bundle.Imc}"/>
+                                <h:outputText style="color:#66ff33;font-size:20px" value=" #{WARTKG.imc}"/>
+
+                            </p>
+                            <h:outputText value="#{bundle.Valorac}"/>
+                            <h:outputText style="color:#66ff33;font-size:20px" value=" #{WARTKG.valorac}"/>
+                            <p>
+                                <h:outputText value="#{bundle.TMB}"/>
+                                <h:outputText  style="color:#66ff33;font-size:20px" value=" #{WARTKG.TMBpa}" />
+
+                            </p>
+                        </p:fieldset>
+
+                        <p:fieldset  id="dm"  legend="Tus Metas ">    
+                            <h:outputText value="#{bundle.PesoId}"/>
+                            <h:outputText style="color:#66ff33;font-size:20px" value=" #{WARTKG.pesoId}" />
+                            <p>
+                                <h:outputText value="#{bundle.TMBi}"/>
+                                <h:outputText  style="color:#66ff33;font-size:20px" value=" #{WARTKG.TMBpi}"/>
+
+                            </p>
+                            <h:outputText   value="Con:"/>
+                            <h:outputText style="color:#66ff33;font-size:20px" value=" #{WARTKG.kcalMP}"/>
+                            <h:outputText  style="font-size:20px" value=" #{bundle.MP}"/>
+                        </p:fieldset>
+
+                        <p:fieldset  id="dc"  legend="Nuestro Consejo ">
+                            <h:outputText value="#{bundle.Consume}"/>
+                            <h:outputText style="color:#66ff33;font-size:20px" value=" #{WARTKG.kcalAd}"/>
+                            <h:outputText  style="font-size:20px" value=" #{bundle.KcalAdelg}"/>
+                        </p:fieldset>   
+                    </p:panel>
+                </h:form>
+                <h:form id="f3">
+                    <p:commandButton value="#{bundle.Back}"  id="withIcon2" action="greeting"  icon="ui-icon-circle-arrow-w" />
+                </h:form>
+                <h:form id="f4">
+                    <p:commandButton value="#{bundle.Diet}" id="withIcon3" action="Diets"  icon="ui-icon-scissors" />
+                </h:form> 
+            </p:layoutUnit>
+            <p:layoutUnit position="south" size="100">
+                <div id="pcolumn">
+                    <h3> <h:outputText id="tit3" value="La Solución más rapida para lograrlo.¡Consume MENOS! "/> </h3>
+                    <h2>Contacto:</h2>
+                    <h2> email: wartokgwebcub@gmail.com</h2>
+                </div>
+                <div id="logom">
+                    <h:graphicImage library="images" name="LogoMumtm.png"/>
+                </div>  
+
+            </p:layoutUnit>
+        </p:layout>
+    </h:body>
+</html>
+
