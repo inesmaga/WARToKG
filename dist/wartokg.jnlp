@@ -9,8 +9,7 @@
     <jse version="6.0+"/>
     <war href= "WarToKg.war"/>
 </resources>
-<application-desc welcome-file= "faces/greeting.xhtml">
-</application-desc>
+<welcome-file>faces/greeting.xhtml</welcome-file>
 
 
 </jnlp>
