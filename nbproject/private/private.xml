@@ -23,10 +23,10 @@
             <file>file:/C:/netbeansProjects/WarToKg/nbproject/private/private.xml</file>
             <file>file:/C:/netbeansProjects/WarToKg/README.md</file>
             <file>file:/C:/netbeansProjects/WarToKg/nbproject/project.properties</file>
+            <file>file:/C:/netbeansProjects/WarToKg/.git/config</file>
             <file>file:/C:/netbeansProjects/WarToKg/web/resources/css/wartokg.css</file>
             <file>file:/C:/netbeansProjects/WarToKg/web/greeting.xhtml</file>
             <file>file:/C:/netbeansProjects/WarToKg/src/java/wartokg/web/ImcClient.java</file>
-            <file>file:/C:/netbeansProjects/WarToKg/build/web/META-INF/MANIFEST.MF</file>
             <file>file:/C:/netbeansProjects/WarToKg/build.xml</file>
             <file>file:/C:/netbeansProjects/WarToKg/web/resources/images/Manzanas2.jpg</file>
             <file>file:/C:/netbeansProjects/WarToKg/web/Diets.xhtml</file>
@@ -34,6 +34,7 @@
             <file>file:/C:/netbeansProjects/WarToKg/nbproject/faces-config.NavData</file>
             <file>file:/C:/netbeansProjects/WarToKg/nbproject/genfiles.properties</file>
             <file>file:/C:/netbeansProjects/WarToKg/web/WEB-INF/beans.xml</file>
+            <file>file:/C:/netbeansProjects/WarToKg/index.html</file>
         </group>
     </open-files>
 </project-private>
